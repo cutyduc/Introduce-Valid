@@ -2,17 +2,15 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 type AuthMode = "LOGIN" | "REGISTER";
-interface LoginForm {
-  username: string;
-  password: string;
-}
 
 export function useLogin() {
   // state để lưu mode hiện tại
   const [mode, setMode] = useState<AuthMode>("LOGIN");
 
   // react-hook-form
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm({
+    defaultValues: {},
+  });
 
   // đổi qua REGISTER
   const handleRegister = () => {
@@ -26,7 +24,8 @@ export function useLogin() {
     reset();
   };
   // xử lý submit
-  const onSubmit = (data: LoginForm) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const onSubmit = (data: any) => {
     if (mode === "LOGIN") {
       console.log("Login with", data);
     } else {
