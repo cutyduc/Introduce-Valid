@@ -2,6 +2,10 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 type AuthMode = "LOGIN" | "REGISTER";
+interface LoginForm {
+  username: string;
+  password: string;
+}
 
 export function useLogin() {
   // state để lưu mode hiện tại
@@ -22,7 +26,7 @@ export function useLogin() {
     reset();
   };
   // xử lý submit
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: LoginForm) => {
     if (mode === "LOGIN") {
       console.log("Login with", data);
     } else {
