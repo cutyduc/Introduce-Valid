@@ -1,9 +1,10 @@
 import CoreChip from "@/components/atoms/CoreChip";
+import CoreCard from "@/components/organisms/CoreCard";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-items-center ">
+    <div className="flex gap-8 items-center justify-items-center ">
       <Image
         src="/valid/images/background.png"
         width={500}
@@ -12,6 +13,12 @@ export default function Home() {
       />
 
       <CoreChip lable="chu van duc" />
+      <CoreCard
+        title="Core Card"
+        content="Content Card"
+        tag="taggg"
+        button="button"
+      />
     </div>
   );
 }

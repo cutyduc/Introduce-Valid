@@ -6,7 +6,7 @@ import { Chip, ChipProps as MuiChipProps } from "@mui/material";
  */
 export interface CoreChipProps extends MuiChipProps {
   highlight?: boolean; // 🔹 Custom prop riêng: làm label đậm hơn
-  lable: string;
+  lable?: string;
   clickable?: boolean;
 }
 
