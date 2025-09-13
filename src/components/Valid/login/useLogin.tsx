@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, FieldValues } from "react-hook-form";
 
 type AuthMode = "LOGIN" | "REGISTER";
 
@@ -8,7 +8,7 @@ export function useLogin() {
   const [mode, setMode] = useState<AuthMode>("LOGIN");
 
   // react-hook-form
-  const { register, handleSubmit, reset } = useForm({
+  const { register, handleSubmit, reset } = useForm<FieldValues>({
     defaultValues: {},
   });
 
