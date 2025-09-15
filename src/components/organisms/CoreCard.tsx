@@ -11,6 +11,7 @@ import { Exam } from "./type";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import Link from "next/link";
 
 type Prop = {
   prop: Exam;
@@ -97,7 +98,7 @@ export default function CoreCard(props: Prop) {
         </Box>
       </CardContent>
       <Button variant="contained" color="primary">
-        Chi Tiết
+        <Link href={`/test/${prop?.id}`}>Chi tiết</Link>
       </Button>
     </Card>
   );

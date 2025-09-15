@@ -1,5 +1,5 @@
-import Test from "@/components/Valid/test/test";
+import Exam from "@/components/Valid/test/exam/exam";
 
 export default function Page() {
-  return <Test />;
+  return <Exam />;
 }
