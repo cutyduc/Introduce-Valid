@@ -6,10 +6,8 @@ import Image from "next/image";
 import NaviagationCustom from "./Navigation";
 
 const navItems = [
-  { label: "DUCK", href: "/" },
-  { label: "TUAN ANH", href: "/1" },
-  { label: "NAM", href: "/2" },
-  { label: "DUY", href: "/3" },
+  { label: "Trang chủ", href: "/" },
+  { label: "Đề thi Online", href: "/test" },
 ];
 
 export default function Header() {
